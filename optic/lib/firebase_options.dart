@@ -56,33 +56,33 @@ class DefaultFirebaseOptions {
   /// Registered in Firebase console → Project settings → Your apps → Web
   /// ("Optic" web app), project optic-8f64e.
   static const FirebaseOptions web = FirebaseOptions(
-    apiKey: 'AIzaSyDucsugM6YpZE0PY6X58jARdYwXu5f9KfA',
-    appId: '1:180976427102:web:149ba0c623bb3a4a7f14cf',
-    messagingSenderId: '180976427102',
-    projectId: 'optic-8f64e',
-    authDomain: 'optic-8f64e.firebaseapp.com',
-    storageBucket: 'optic-8f64e.firebasestorage.app',
-    measurementId: 'G-4XHDGRE28D',
+    apiKey: '*****',
+    appId: '*****',
+    messagingSenderId: '***',
+    projectId: '*****',
+    authDomain: '*****',
+    storageBucket: '*****',
+    measurementId: '*****',
   );
 
   /// Registered in Firebase console → Project settings → Your apps →
   /// Android ("Optic", package com.example.optic), project optic-8f64e.
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyDfhpn99asFFhNeMta8cw31t6-xOFamL1E',
-    appId: '1:180976427102:android:a0b722ff9d21632f7f14cf',
-    messagingSenderId: '180976427102',
-    projectId: 'optic-8f64e',
-    storageBucket: 'optic-8f64e.firebasestorage.app',
+    apiKey: '*****',
+    appId: '****',
+    messagingSenderId: '****',
+    projectId: '****',
+    storageBucket: '****',
   );
 
   /// Registered in Firebase console → Project settings → Your apps →
   /// iOS ("Optic", bundle id com.example.optic), project optic-8f64e.
   static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyAo55zdfHttJ3i2QfXC2jkLfdqLryOHlQs',
-    appId: '1:180976427102:ios:367c4a1c50b004cc7f14cf',
-    messagingSenderId: '180976427102',
-    projectId: 'optic-8f64e',
-    storageBucket: 'optic-8f64e.firebasestorage.app',
-    iosBundleId: 'com.example.optic',
+    apiKey: '***',
+    appId: '***',
+    messagingSenderId: '***',
+    projectId: '***',
+    storageBucket: '***',
+    iosBundleId: '****',
   );
 }
