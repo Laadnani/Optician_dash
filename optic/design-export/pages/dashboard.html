@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dashboard — Doc CRM design export</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+<button class="btn btn-outline btn-icon" id="mobileNavToggle" style="position:fixed;top:14px;left:14px;z-index:30;display:none;">
+  <span class="material-symbols-outlined">menu</span>
+</button>
+<div class="app-shell">
+<aside class="sidebar" id="sidebar">
+  <div class="sidebar-brand"><div class="logo-mark">DC</div><div><div class="brand-name">Doc CRM</div><div class="brand-sub">Optical retail operations</div></div></div>
+  <nav class="sidebar-scroll">
+<a class="nav-item active" href="dashboard.html"><span class="material-symbols-outlined">dashboard</span><span class="label">Dashboard</span></a>
+<a class="nav-item" href="calendar.html"><span class="material-symbols-outlined">calendar_month</span><span class="label">Calendar</span></a>
+<div class="nav-section-label">Patients</div>
+<a class="nav-item" href="patients.html"><span class="material-symbols-outlined">people</span><span class="label">Patients</span></a>
+<a class="nav-item" href="prescriptions.html"><span class="material-symbols-outlined">assignment</span><span class="label">Optical Prescription Management</span></a>
+<a class="nav-item" href="measurements.html"><span class="material-symbols-outlined">straighten</span><span class="label">Visual / Optical Measurements</span></a>
+<a class="nav-item" href="communication.html"><span class="material-symbols-outlined">forum</span><span class="label">Communication</span></a>
+<div class="nav-section-label">Optical Consultation</div>
+<a class="nav-item" href="frame-selection.html"><span class="material-symbols-outlined">camera_alt</span><span class="label">Frame Selection / Virtual Sale</span></a>
+<a class="nav-item" href="lens-recommendation.html"><span class="material-symbols-outlined">medical_services</span><span class="label">Lens Recommendation / Optical Consultation</span></a>
+<div class="nav-section-label">Products &amp; Inventory</div>
+<a class="nav-item" href="frame-inventory.html"><span class="material-symbols-outlined">inventory_2</span><span class="label">Frame Management / Frame Inventory</span></a>
+<a class="nav-item" href="lens-catalog.html"><span class="material-symbols-outlined">blur_on</span><span class="label">Lens Product Management</span></a>
+<a class="nav-item" href="contact-lenses.html"><span class="material-symbols-outlined">visibility</span><span class="label">Contact Lens Management</span></a>
+<a class="nav-item" href="accessories.html"><span class="material-symbols-outlined">shopping_bag</span><span class="label">Accessories Inventory</span></a>
+<div class="nav-section-label">Sales</div>
+<a class="nav-item" href="quotes.html"><span class="material-symbols-outlined">request_quote</span><span class="label">Pricing / Quotes</span></a>
+<a class="nav-item" href="orders.html"><span class="material-symbols-outlined">shopping_cart</span><span class="label">Eyewear Order Management</span></a>
+<a class="nav-item" href="billing.html"><span class="material-symbols-outlined">receipt_long</span><span class="label">Billing</span></a>
+<div class="nav-section-label">Production</div>
+<a class="nav-item" href="laboratory.html"><span class="material-symbols-outlined">science</span><span class="label">Laboratory / Lens Production Management</span></a>
+<a class="nav-item" href="mounting.html"><span class="material-symbols-outlined">build</span><span class="label">Mounting / Assembly</span></a>
+<a class="nav-item" href="quality-control.html"><span class="material-symbols-outlined">verified</span><span class="label">Quality Control</span></a>
+<div class="nav-section-label">Patient Delivery</div>
+<a class="nav-item" href="final-fitting.html"><span class="material-symbols-outlined">tune</span><span class="label">Final Fitting / Adjustment</span></a>
+<a class="nav-item" href="delivery.html"><span class="material-symbols-outlined">local_shipping</span><span class="label">Delivery</span></a>
+<a class="nav-item" href="after-sales.html"><span class="material-symbols-outlined">support_agent</span><span class="label">After-Sales / Follow-Up</span></a>
+<a class="nav-item" href="repairs.html"><span class="material-symbols-outlined">build_circle</span><span class="label">Repairs &amp; Maintenance</span></a>
+<a class="nav-item" href="warranty.html"><span class="material-symbols-outlined">verified_user</span><span class="label">Warranty Management</span></a>
+<div class="nav-section-label">Procurement</div>
+<a class="nav-item" href="suppliers.html"><span class="material-symbols-outlined">storefront</span><span class="label">Supplier Management</span></a>
+<a class="nav-item" href="purchasing.html"><span class="material-symbols-outlined">shopping_cart_checkout</span><span class="label">Purchasing</span></a>
+<div class="nav-section-label">Management</div>
+<a class="nav-item" href="tasks.html"><span class="material-symbols-outlined">badge</span><span class="label">Staff / Employee Tasks</span></a>
+<a class="nav-item" href="settings.html"><span class="material-symbols-outlined">settings</span><span class="label">Settings</span></a>
+  </nav>
+  <div class="sidebar-footer"><a class="nav-item" href="#"><span class="material-symbols-outlined">logout</span><span class="label">Sign out</span></a></div>
+</aside>
+<main class="content">
+<div class="page">
+<div class="card" style="background:linear-gradient(135deg, #eff6ff, #ffffff); margin-bottom:20px;">
+  <div class="row" style="justify-content:space-between; align-items:flex-start;">
+    <div>
+      <div style="font-size:18px; font-weight:700;">Good morning, Youssef</div>
+      <div class="muted" style="margin-top:4px;">Wednesday, August 12, 2026 &middot; 6 appointments today</div>
+    </div>
+    <div class="avatar" style="width:44px;height:44px;">YB</div>
+  </div>
+</div>
+<div class="card" style="margin-bottom:20px;">
+  <div class="row" style="justify-content:space-between;">
+    <div>
+      <div class="muted" style="font-size:12px;">Monthly revenue</div>
+      <div style="font-size:26px; font-weight:700; margin-top:2px;">148,600 MAD</div>
+      <div class="chip chip-success" style="margin-top:6px;">+12% vs. last month</div>
+    </div>
+    <span class="material-symbols-outlined" style="font-size:34px; color:var(--chart-2);">trending_up</span>
+  </div>
+</div>
+<div class="row" style="gap:10px; margin-bottom:20px;">
+  <button class="btn btn-outline"><span class="material-symbols-outlined">event_available</span>New appointment</button>
+  <button class="btn btn-outline"><span class="material-symbols-outlined">person_add</span>New patient</button>
+</div>
+<div class="kpi-grid cols-4">
+  <div class="kpi-card">
+    <div class="kpi-icon tint-primary"><span class="material-symbols-outlined">event</span></div>
+    <div><div class="kpi-value">6</div><div class="kpi-label">Today&#x27;s appointments</div></div>
+  </div>
+  <div class="kpi-card">
+    <div class="kpi-icon tint-success"><span class="material-symbols-outlined">check_circle</span></div>
+    <div><div class="kpi-value">2</div><div class="kpi-label">Completed</div></div>
+  </div>
+  <div class="kpi-card">
+    <div class="kpi-icon tint-chart2"><span class="material-symbols-outlined">schedule</span></div>
+    <div><div class="kpi-value">3</div><div class="kpi-label">Scheduled</div></div>
+  </div>
+  <div class="kpi-card">
+    <div class="kpi-icon tint-destructive"><span class="material-symbols-outlined">cancel</span></div>
+    <div><div class="kpi-value">1</div><div class="kpi-label">Cancelled</div></div>
+  </div>
+</div>
+<div class="two-col" style="margin:20px 0;">
+  <div class="card">
+    <div class="row" style="justify-content:space-between; margin-bottom:12px;">
+      <div style="font-weight:600;">Today's appointments</div>
+      <span class="muted" style="font-size:12px;">Aug 12, 2026</span>
+    </div>
+    <div class="stack">
+      <div class="row" style="justify-content:space-between; padding:8px 0; border-bottom:1px solid var(--border);">
+        <div class="row"><div class="avatar">NA</div><div><div style="font-weight:500;">Nadia El Amrani</div><div class="muted" style="font-size:12px;">09:00 &middot; Routine eye exam</div></div></div>
+        <span class="chip chip-success">Completed</span>
+      </div>
+      <div class="row" style="justify-content:space-between; padding:8px 0; border-bottom:1px solid var(--border);">
+        <div class="row"><div class="avatar">KI</div><div><div style="font-weight:500;">Karim Idrissi</div><div class="muted" style="font-size:12px;">10:30 &middot; Follow-up</div></div></div>
+        <span class="chip chip-info">Scheduled</span>
+      </div>
+      <div class="row" style="justify-content:space-between; padding:8px 0;">
+        <div class="row"><div class="avatar">AR</div><div><div style="font-weight:500;">Amine Rachidi</div><div class="muted" style="font-size:12px;">14:00 &middot; Contact lens fitting</div></div></div>
+        <span class="chip chip-info">Scheduled</span>
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div style="font-weight:600; margin-bottom:12px;">Needs your attention</div>
+    <div class="stack">
+      <div class="row" style="justify-content:space-between;">
+        <div class="row"><span class="material-symbols-outlined" style="color:var(--warning);">draw</span>
+        <div><div style="font-weight:500; font-size:13px;">Consent form needs signature</div><div class="muted" style="font-size:12px;">Hicham Alaoui</div></div></div>
+        <span class="material-symbols-outlined muted">chevron_right</span>
+      </div>
+      <div class="row" style="justify-content:space-between;">
+        <div class="row"><span class="material-symbols-outlined" style="color:var(--warning);">draw</span>
+        <div><div style="font-weight:500; font-size:13px;">Consent form needs signature</div><div class="muted" style="font-size:12px;">Fatima Ezzahra</div></div></div>
+        <span class="material-symbols-outlined muted">chevron_right</span>
+      </div>
+    </div>
+    <button class="btn btn-ghost btn-sm" style="margin-top:10px;">See all</button>
+  </div>
+</div>
+<div class="card-grid cols-2">
+  <div class="card">
+    <div class="row" style="justify-content:space-between; margin-bottom:8px;"><span style="font-weight:600;">Patients overview</span><span class="material-symbols-outlined muted">people</span></div>
+    <div class="row" style="gap:20px;">
+      <div><div style="font-size:20px;font-weight:700;">312</div><div class="muted" style="font-size:11.5px;">Total patients</div></div>
+      <div><div style="font-size:20px;font-weight:700;">18</div><div class="muted" style="font-size:11.5px;">New this month</div></div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="row" style="justify-content:space-between; margin-bottom:8px;"><span style="font-weight:600;">Inventory alerts</span><span class="material-symbols-outlined muted">inventory_2</span></div>
+    <div class="row" style="gap:20px;">
+      <div><div style="font-size:20px;font-weight:700; color:var(--warning);">5</div><div class="muted" style="font-size:11.5px;">Low stock frames</div></div>
+      <div><div style="font-size:20px;font-weight:700; color:var(--destructive);">2</div><div class="muted" style="font-size:11.5px;">Out of stock</div></div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="row" style="justify-content:space-between; margin-bottom:8px;"><span style="font-weight:600;">Orders pipeline</span><span class="material-symbols-outlined muted">shopping_cart</span></div>
+    <div class="row" style="gap:20px;">
+      <div><div style="font-size:20px;font-weight:700;">38</div><div class="muted" style="font-size:11.5px;">Total orders</div></div>
+      <div><div style="font-size:20px;font-weight:700;">6</div><div class="muted" style="font-size:11.5px;">In production</div></div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="row" style="justify-content:space-between; margin-bottom:8px;"><span style="font-weight:600;">Quality overview</span><span class="material-symbols-outlined muted">verified</span></div>
+    <div class="row" style="gap:20px;">
+      <div><div style="font-size:20px;font-weight:700; color:var(--success);">91%</div><div class="muted" style="font-size:11.5px;">Pass rate</div></div>
+      <div><div style="font-size:20px;font-weight:700; color:var(--destructive);">3</div><div class="muted" style="font-size:11.5px;">Failed checks</div></div>
+    </div>
+  </div>
+</div>
+</div>
+</main>
+</div>
+<script src="../assets/js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+name: optic
+description: "A new Flutter project."
+publish_to: 'none'
+version: 0.1.0
+
+environment:
+  sdk: ^3.8.1
+
+dependencies:
+  flutter:
+    sdk: flutter
+  fl_chart: ^0.69.2
+  go_router: ^17.0.0
+  google_fonts: ^6.3.2
+  provider: ^6.1.5+1
+  shadcn_flutter: ^0.0.39
+  shared_preferences: ^2.5.3
+  firebase_core: ^4.4.0
+  firebase_auth: ^6.0.0
+  cloud_firestore: ^6.1.2
+  # Pinned to 1.2.1, NOT the latest 1.2.3 — 1.2.2 bumped image_picker's own
+  # minimum required Dart SDK to 3.9, which is newer than this project's
+  # `environment: sdk: ^3.8.1` constraint and fails `pub get` version
+  # solving ("version solving failed" for image_picker >=1.2.2). 1.2.1 only
+  # requires Dart 3.7, so it resolves cleanly against ^3.8.1.
+  #
+  # No firebase_storage dependency: profile pictures are stored as a
+  # compressed Base64 data URI directly on the /users/{uid} Firestore doc
+  # instead of a Storage file — Cloud Storage for Firebase now requires the
+  # paid Blaze plan even for trivial usage, whereas this keeps the feature
+  # entirely on the free Firestore tier already used everywhere else in
+  # this app. See TenantSession.uploadPhoto.
+  image_picker: ^1.2.1
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^5.0.0
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/images/logo.png
+    - assets/images/login_background.png

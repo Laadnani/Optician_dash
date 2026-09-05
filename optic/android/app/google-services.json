@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "180976427102",
+    "firebase_url": "https://optic-8f64e-default-rtdb.europe-west1.firebasedatabase.app",
+    "project_id": "optic-8f64e",
+    "storage_bucket": "optic-8f64e.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:180976427102:android:a0b722ff9d21632f7f14cf",
+        "android_client_info": {
+          "package_name": "com.example.optic"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDfhpn99asFFhNeMta8cw31t6-xOFamL1E"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

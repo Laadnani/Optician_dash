@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Quality Control — Doc CRM design export</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+<button class="btn btn-outline btn-icon" id="mobileNavToggle" style="position:fixed;top:14px;left:14px;z-index:30;display:none;">
+  <span class="material-symbols-outlined">menu</span>
+</button>
+<div class="app-shell">
+<aside class="sidebar" id="sidebar">
+  <div class="sidebar-brand"><div class="logo-mark">DC</div><div><div class="brand-name">Doc CRM</div><div class="brand-sub">Optical retail operations</div></div></div>
+  <nav class="sidebar-scroll">
+<a class="nav-item" href="dashboard.html"><span class="material-symbols-outlined">dashboard</span><span class="label">Dashboard</span></a>
+<a class="nav-item" href="calendar.html"><span class="material-symbols-outlined">calendar_month</span><span class="label">Calendar</span></a>
+<div class="nav-section-label">Patients</div>
+<a class="nav-item" href="patients.html"><span class="material-symbols-outlined">people</span><span class="label">Patients</span></a>
+<a class="nav-item" href="prescriptions.html"><span class="material-symbols-outlined">assignment</span><span class="label">Optical Prescription Management</span></a>
+<a class="nav-item" href="measurements.html"><span class="material-symbols-outlined">straighten</span><span class="label">Visual / Optical Measurements</span></a>
+<a class="nav-item" href="communication.html"><span class="material-symbols-outlined">forum</span><span class="label">Communication</span></a>
+<div class="nav-section-label">Optical Consultation</div>
+<a class="nav-item" href="frame-selection.html"><span class="material-symbols-outlined">camera_alt</span><span class="label">Frame Selection / Virtual Sale</span></a>
+<a class="nav-item" href="lens-recommendation.html"><span class="material-symbols-outlined">medical_services</span><span class="label">Lens Recommendation / Optical Consultation</span></a>
+<div class="nav-section-label">Products &amp; Inventory</div>
+<a class="nav-item" href="frame-inventory.html"><span class="material-symbols-outlined">inventory_2</span><span class="label">Frame Management / Frame Inventory</span></a>
+<a class="nav-item" href="lens-catalog.html"><span class="material-symbols-outlined">blur_on</span><span class="label">Lens Product Management</span></a>
+<a class="nav-item" href="contact-lenses.html"><span class="material-symbols-outlined">visibility</span><span class="label">Contact Lens Management</span></a>
+<a class="nav-item" href="accessories.html"><span class="material-symbols-outlined">shopping_bag</span><span class="label">Accessories Inventory</span></a>
+<div class="nav-section-label">Sales</div>
+<a class="nav-item" href="quotes.html"><span class="material-symbols-outlined">request_quote</span><span class="label">Pricing / Quotes</span></a>
+<a class="nav-item" href="orders.html"><span class="material-symbols-outlined">shopping_cart</span><span class="label">Eyewear Order Management</span></a>
+<a class="nav-item" href="billing.html"><span class="material-symbols-outlined">receipt_long</span><span class="label">Billing</span></a>
+<div class="nav-section-label">Production</div>
+<a class="nav-item" href="laboratory.html"><span class="material-symbols-outlined">science</span><span class="label">Laboratory / Lens Production Management</span></a>
+<a class="nav-item" href="mounting.html"><span class="material-symbols-outlined">build</span><span class="label">Mounting / Assembly</span></a>
+<a class="nav-item active" href="quality-control.html"><span class="material-symbols-outlined">verified</span><span class="label">Quality Control</span></a>
+<div class="nav-section-label">Patient Delivery</div>
+<a class="nav-item" href="final-fitting.html"><span class="material-symbols-outlined">tune</span><span class="label">Final Fitting / Adjustment</span></a>
+<a class="nav-item" href="delivery.html"><span class="material-symbols-outlined">local_shipping</span><span class="label">Delivery</span></a>
+<a class="nav-item" href="after-sales.html"><span class="material-symbols-outlined">support_agent</span><span class="label">After-Sales / Follow-Up</span></a>
+<a class="nav-item" href="repairs.html"><span class="material-symbols-outlined">build_circle</span><span class="label">Repairs &amp; Maintenance</span></a>
+<a class="nav-item" href="warranty.html"><span class="material-symbols-outlined">verified_user</span><span class="label">Warranty Management</span></a>
+<div class="nav-section-label">Procurement</div>
+<a class="nav-item" href="suppliers.html"><span class="material-symbols-outlined">storefront</span><span class="label">Supplier Management</span></a>
+<a class="nav-item" href="purchasing.html"><span class="material-symbols-outlined">shopping_cart_checkout</span><span class="label">Purchasing</span></a>
+<div class="nav-section-label">Management</div>
+<a class="nav-item" href="tasks.html"><span class="material-symbols-outlined">badge</span><span class="label">Staff / Employee Tasks</span></a>
+<a class="nav-item" href="settings.html"><span class="material-symbols-outlined">settings</span><span class="label">Settings</span></a>
+  </nav>
+  <div class="sidebar-footer"><a class="nav-item" href="#"><span class="material-symbols-outlined">logout</span><span class="label">Sign out</span></a></div>
+</aside>
+<main class="content">
+<div class="page">
+<div class="page-header-row">
+  <div><h1 class="page-title">Quality Control</h1></div>
+  <div class="page-header-actions"><button class="btn btn-primary"><span class="material-symbols-outlined">add</span>Add check</button></div>
+</div>
+<div class="month-filter-bar">
+  <span class="material-symbols-outlined">calendar_month</span>
+  <span class="nav-arrow material-symbols-outlined">chevron_left</span>
+  <span class="month-label">August 2026</span>
+  <span class="nav-arrow material-symbols-outlined">chevron_right</span>
+</div>
+<div class="kpi-grid cols-3">
+  <div class="kpi-card">
+    <div class="kpi-icon tint-primary"><span class="material-symbols-outlined">verified</span></div>
+    <div><div class="kpi-value">33</div><div class="kpi-label">Total checks</div></div>
+  </div>
+  <div class="kpi-card">
+    <div class="kpi-icon tint-success"><span class="material-symbols-outlined">check_circle</span></div>
+    <div><div class="kpi-value">91%</div><div class="kpi-label">Pass rate</div></div>
+  </div>
+  <div class="kpi-card">
+    <div class="kpi-icon tint-destructive"><span class="material-symbols-outlined">error</span></div>
+    <div><div class="kpi-value">3</div><div class="kpi-label">Failed</div></div>
+  </div>
+</div>
+<div class="card-grid">
+<div class="card record-card">
+  
+  <div class="record-card-top">
+    <div><div class="record-card-title">Frame fit</div><div class="record-card-subtitle">ORD-2291</div></div>
+    <span class="chip chip-success">Pass</span>
+  </div>
+  <div class="record-field-row"><span class="record-field-label">Date</span><span class="record-field-value">Aug 13, 2026</span></div><div class="record-field-row"><span class="record-field-label">Inspector</span><span class="record-field-value">Salma T.</span></div>
+</div>
+<div class="card record-card">
+  
+  <div class="record-card-top">
+    <div><div class="record-card-title">Lens quality</div><div class="record-card-subtitle">ORD-2280</div></div>
+    <span class="chip chip-warning">Conditional pass</span>
+  </div>
+  <div class="record-field-row"><span class="record-field-label">Date</span><span class="record-field-value">Aug 9, 2026</span></div><div class="record-field-row"><span class="record-field-label">Inspector</span><span class="record-field-value">Youssef B.</span></div>
+</div>
+<div class="card record-card">
+  
+  <div class="record-card-top">
+    <div><div class="record-card-title">Prescription accuracy</div><div class="record-card-subtitle">ORD-2266</div></div>
+    <span class="chip chip-destructive">Fail</span>
+  </div>
+  <div class="record-field-row"><span class="record-field-label">Date</span><span class="record-field-value">Aug 2, 2026</span></div><div class="record-field-row"><span class="record-field-label">Inspector</span><span class="record-field-value">Salma T.</span></div>
+</div>
+</div>
+</div>
+</main>
+</div>
+<script src="../assets/js/app.js"></script>
+</body>
+</html>

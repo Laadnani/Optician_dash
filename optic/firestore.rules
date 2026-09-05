@@ -1,0 +1,92 @@
+rules_version = '2';
+
+// Doc CRM — Firestore security rules
+//
+// Tenant model recap (see firebase_migration_guide.md, Steps 3/4/6):
+//   /tenants/{tenantId}                        — one doc per shop
+//   /users/{uid}                               — one doc per staff account, uid = Firebase Auth UID
+//   /tenants/{tenantId}/<collection>/{docId}    — all ~31 business-data collections, one per app module
+//
+// Provisioning happens OUTSIDE this app: a shop's /tenants/{tenantId} doc and
+// its staff /users/{uid} docs are created by the licensing website's backend
+// (via the Firebase Admin SDK), not by any signed-in client. The Admin SDK
+// bypasses these rules entirely, so there is deliberately no client-side
+// "create tenant" or "create user profile" path below — this app is
+// sign-in-only (see lib/screens/login_screen.dart / lib/controllers/tenant_session.dart).
+//
+// Everything below exists to answer one question: given a signed-in
+// request, does it stay inside the one tenant that user belongs to?
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    function signedIn() {
+      return request.auth != null;
+    }
+
+    // The tenant a signed-in user belongs to, per their own /users/{uid}
+    // profile doc. This is the entire tenant boundary — every rule below
+    // ultimately reduces to "does myTenantId() match the path being read?"
+    //
+    // NOTE: the field is 'tenantID' (capital ID), matching the exact key
+    // used in the Firestore console for this project — not the more usual
+    // camelCase 'tenantId'. Getting this wrong doesn't error, it just
+    // silently evaluates to null, which fails every myTenantId() == tenantId
+    // check below and locks the tenant out of all their own business data.
+    //
+    // .trim() matters here too: this console's tenantID value has been
+    // hand-entered with a stray leading/trailing space (confirmed on a live
+    // doc). The client already trims its own copy before using it as a
+    // path segment, so comparing the raw (untrimmed) field value here
+    // against that trimmed path segment would silently fail the equality
+    // check below and deny every read/write under /tenants/{tenantId}.
+    function myTenantId() {
+      return get(/databases/$(database)/documents/users/$(request.auth.uid)).data.tenantID.trim();
+    }
+
+    // Staff profile docs — provisioned externally (see header above).
+    // A signed-in user may only ever read their OWN profile. The single
+    // exception to "no writes from the client" is their own `photoUrl`
+    // field (the in-app profile-picture picker) — `hasOnly(['photoUrl'])`
+    // guarantees that same write can't smuggle in a change to tenantId,
+    // role, name, phone, or anything else on the doc. No create, no
+    // delete, ever — those stay provisioning-only.
+    match /users/{uid} {
+      allow read: if signedIn() && request.auth.uid == uid;
+      // `photoUrl` is a Base64 data URI now (see TenantSession.uploadPhoto
+      // — no Firebase Storage, that requires the paid Blaze plan), stored
+      // straight on this doc. The 700000-char cap mirrors the client-side
+      // guard in TenantSession._maxEncodedPhotoLength and keeps a
+      // misbehaving/compromised client from blowing past Firestore's
+      // ~1 MiB document limit with an oversized image.
+      allow update: if signedIn() && request.auth.uid == uid
+                    && request.resource.data.diff(resource.data).affectedKeys().hasOnly(['photoUrl'])
+                    && request.resource.data.photoUrl.size() < 700000;
+      allow create, delete: if false;
+    }
+
+    // Shop/tenant docs — provisioned externally at purchase time. A signed-in
+    // user may read only their own shop's doc (for its display name, plan,
+    // etc.), and can never write it from the client.
+    match /tenants/{tenantId} {
+      allow read: if signedIn() && myTenantId() == tenantId;
+      allow write: if false;
+
+      // Every business collection, for every module (clients, appointments,
+      // prescriptions, orders, ... ~31 total), lives under here — one
+      // wildcard rule covers all of them instead of one rule per collection.
+      // Ordinary staff reads/writes their own shop's data; the licensing
+      // website's own provisioning writes go through the Admin SDK and are
+      // unaffected by this rule either way.
+      match /{collection}/{docId} {
+        allow read, write: if signedIn() && myTenantId() == tenantId;
+      }
+    }
+
+    // Anything not matched above is denied by default (Firestore's rules
+    // are deny-by-default already, but stated here for clarity).
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}

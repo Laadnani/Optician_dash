@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Doc CRM — design export index</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+<style>
+  body { background: var(--background); }
+  .idx-wrap { max-width: 980px; margin: 0 auto; padding: 48px 24px 80px; }
+  .idx-hero { margin-bottom: 32px; }
+  .idx-hero h1 { font-size: 26px; margin: 0 0 8px; }
+  .idx-hero p { color: var(--muted-foreground); max-width: 640px; }
+  .idx-group { margin-bottom: 28px; }
+  .idx-group-title { font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: .04em; color: var(--muted-foreground); margin-bottom: 10px; }
+  .idx-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 10px; }
+  .idx-link { display:flex; align-items:center; gap:10px; padding:12px 14px; background:var(--surface); border:1px solid var(--border); border-radius:var(--radius); font-size:13px; font-weight:500; box-shadow:var(--shadow-card); }
+  .idx-link:hover { border-color: var(--border-strong); background: var(--surface-2); }
+  .idx-link .material-symbols-outlined { color: var(--muted-foreground); font-size:19px; }
+</style>
+</head>
+<body>
+<div class="idx-wrap">
+  <div class="idx-hero">
+    <div class="logo-mark" style="margin-bottom:14px;">DC</div>
+    <h1>Doc CRM — design export</h1>
+    <p>Static HTML/CSS replica of the current Flutter app (29 screens), built for a redesign handoff. Every page uses the shared stylesheet at <code>assets/css/style.css</code> — swap the CSS variables at the top of that file to re-skin every screen at once. See <code>README.md</code> for what's exact vs. approximated.</p>
+  </div>
+  <div class="idx-group"><div class="idx-group-title">Top level</div><div class="idx-grid"><a class="idx-link" href="pages/dashboard.html"><span class="material-symbols-outlined">dashboard</span>Dashboard</a><a class="idx-link" href="pages/calendar.html"><span class="material-symbols-outlined">calendar_month</span>Calendar</a></div></div><div class="idx-group"><div class="idx-group-title">Patients</div><div class="idx-grid"><a class="idx-link" href="pages/patients.html"><span class="material-symbols-outlined">people</span>Patients</a><a class="idx-link" href="pages/prescriptions.html"><span class="material-symbols-outlined">assignment</span>Optical Prescription Management</a><a class="idx-link" href="pages/measurements.html"><span class="material-symbols-outlined">straighten</span>Visual / Optical Measurements</a><a class="idx-link" href="pages/communication.html"><span class="material-symbols-outlined">forum</span>Communication</a></div></div><div class="idx-group"><div class="idx-group-title">Optical Consultation</div><div class="idx-grid"><a class="idx-link" href="pages/frame-selection.html"><span class="material-symbols-outlined">camera_alt</span>Frame Selection / Virtual Sale</a><a class="idx-link" href="pages/lens-recommendation.html"><span class="material-symbols-outlined">medical_services</span>Lens Recommendation / Optical Consultation</a></div></div><div class="idx-group"><div class="idx-group-title">Products &amp; Inventory</div><div class="idx-grid"><a class="idx-link" href="pages/frame-inventory.html"><span class="material-symbols-outlined">inventory_2</span>Frame Management / Frame Inventory</a><a class="idx-link" href="pages/lens-catalog.html"><span class="material-symbols-outlined">blur_on</span>Lens Product Management</a><a class="idx-link" href="pages/contact-lenses.html"><span class="material-symbols-outlined">visibility</span>Contact Lens Management</a><a class="idx-link" href="pages/accessories.html"><span class="material-symbols-outlined">shopping_bag</span>Accessories Inventory</a></div></div><div class="idx-group"><div class="idx-group-title">Sales</div><div class="idx-grid"><a class="idx-link" href="pages/quotes.html"><span class="material-symbols-outlined">request_quote</span>Pricing / Quotes</a><a class="idx-link" href="pages/orders.html"><span class="material-symbols-outlined">shopping_cart</span>Eyewear Order Management</a><a class="idx-link" href="pages/billing.html"><span class="material-symbols-outlined">receipt_long</span>Billing</a></div></div><div class="idx-group"><div class="idx-group-title">Production</div><div class="idx-grid"><a class="idx-link" href="pages/laboratory.html"><span class="material-symbols-outlined">science</span>Laboratory / Lens Production Management</a><a class="idx-link" href="pages/mounting.html"><span class="material-symbols-outlined">build</span>Mounting / Assembly</a><a class="idx-link" href="pages/quality-control.html"><span class="material-symbols-outlined">verified</span>Quality Control</a></div></div><div class="idx-group"><div class="idx-group-title">Patient Delivery</div><div class="idx-grid"><a class="idx-link" href="pages/final-fitting.html"><span class="material-symbols-outlined">tune</span>Final Fitting / Adjustment</a><a class="idx-link" href="pages/delivery.html"><span class="material-symbols-outlined">local_shipping</span>Delivery</a><a class="idx-link" href="pages/after-sales.html"><span class="material-symbols-outlined">support_agent</span>After-Sales / Follow-Up</a><a class="idx-link" href="pages/repairs.html"><span class="material-symbols-outlined">build_circle</span>Repairs &amp; Maintenance</a><a class="idx-link" href="pages/warranty.html"><span class="material-symbols-outlined">verified_user</span>Warranty Management</a></div></div><div class="idx-group"><div class="idx-group-title">Procurement</div><div class="idx-grid"><a class="idx-link" href="pages/suppliers.html"><span class="material-symbols-outlined">storefront</span>Supplier Management</a><a class="idx-link" href="pages/purchasing.html"><span class="material-symbols-outlined">shopping_cart_checkout</span>Purchasing</a></div></div><div class="idx-group"><div class="idx-group-title">Management</div><div class="idx-grid"><a class="idx-link" href="pages/tasks.html"><span class="material-symbols-outlined">badge</span>Staff / Employee Tasks</a><a class="idx-link" href="pages/settings.html"><span class="material-symbols-outlined">settings</span>Settings</a></div></div><div class="idx-group"><div class="idx-group-title">Other views</div><div class="idx-grid">
+    <a class="idx-link" href="pages/add-patient.html"><span class="material-symbols-outlined">person_add</span>Add patient (form)</a>
+    <a class="idx-link" href="pages/patient-file.html"><span class="material-symbols-outlined">folder_open</span>Patient file (detail/tabs)</a>
+  </div></div>
+</div>
+</body>
+</html>
